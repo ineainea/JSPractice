@@ -51,7 +51,10 @@ body
     border-bottom-left-radius: 70px;
     border-bottom-right-radius: 70px;
     background: #b57700;
-    translate: 0.5s ;
+    transition: 0.2s ease-in-out;
+}
+@keyframes shape{
+
 }
 .container .face:hover:before
 {
