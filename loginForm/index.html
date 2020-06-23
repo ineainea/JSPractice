@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+     href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+     integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
+     crossorigin="anonymous">
+     <link rel="stylesheet" href="style.css">
+    <title>Login Sample</title>
+</head>
+<body>
+    <form action="#" class="login-form">
+<!-- head 부분 -->
+        <h1>Sign In</h1>
+
+<!-- Username input 태그 부분 -->
+        <div class="textb">
+            <input type="text" required>
+            <div class="placeholder">Username</div>
+        </div>
+<!-- Password input 태그 부분 -->
+        <div class="textb">
+            <input type="password" required>
+            <div class="placeholder">Password</div>
+            <div class="show-password fas fa-eye-slash"></div>
+        </div>
+<!-- Stay signed in 체크박스부분 -->
+        <div class="checkbox">
+            <input type="checkbox">
+            <div class="fas fa-check"></div>
+            Stay signed in
+        </div>
+<!-- 아래 submit부분 -->
+        <button class="btn fas fa-arrow-right" disabled></button>
+        <a href="#">Can't Sign in?</a>
+        <a href="#">Create Account</a>
+    </form>
+
+
+    <script>
+        /* 클래스네임 textb의 input태그를 전부 fields 변수에 초기화함 */
+        const fields = document.querySelectorAll(".textb input");
+        const btn = document.querySelector(".btn");
+
+        function check(){
+            /* Username과 Password 부분 input 태그의 value값이 공백이 아니면 */
+            if(fields[0].value != "" && fields[1].value != ""){
+                /* 클래스네임 btn 태그에 disabled는 false로 실행되지 않는다. */
+                btn.disabled = false;
+            }else{
+                /* 클래스네임 btn 태그에 disabled는 true로 실행된다. */
+                btn.disabled = true;
+            }
+        }
+
+/* 해당 input태그에  key값이 입력될때,
+위에서 선언한 check() 함수가 작동한다. */
+        fields[0].addEventListener("keyup", check);
+        fields[1].addEventListener("keyup", check);
+
+        document.querySelector(".show-password").addEventListener("click", function(){
+            /* class show-password, fas, fa-arrow-right라서 [2] 인가? */
+            if(this.classList[2] == "fa-eye-slash"){
+                this.classList.remove("fa-eye-slash");
+                this.classList.add("fa-eye");
+                fields[1].type = "text";
+            }else{
+                this.classList.remove("fa-eye");
+                this.classList.add("fa-eye-slash");
+                fields[1].type = "password";
+            }
+        });
+    </script>
+</body>
+</html>
