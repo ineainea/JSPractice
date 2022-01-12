@@ -165,8 +165,6 @@ ellie.age = '21';
 console.log(ellie.age); // 21, 값이 변경됨
 ```
 
-![Untitled.png](D:/코딩공부/드림코딩/드림코딩\_자바스크립트 기초 개념/JS3/Untitled.png)
-
 ```jsx
 5. Dynamic typing: dynamically typed language
 // 선언할때 데이터 타입을 선언하지 않고, run time 즉, 프로그램이 동작할 때 할당된 값에 따라서 타입이 변경될 수 있음
