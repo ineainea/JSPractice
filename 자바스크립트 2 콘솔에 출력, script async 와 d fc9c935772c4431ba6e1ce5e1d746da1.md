@@ -1,4 +1,4 @@
-# 자바스크립트 2. 콘솔에 출력, script async 와 defer의 차이점 및 앞으로 자바스크립트 공부 방향
+# 자바스크립트 2. 콘솔에 출력, script async 와 defer의 차이점
 
 **<script> 태그가 <head> 안에 넣는 경우,**
 
